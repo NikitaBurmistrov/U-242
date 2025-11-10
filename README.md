@@ -50,11 +50,12 @@ python manage.py shell
 # Внутри этой консоли выполняем код ниже:
 from myapp.models import Student
 
-Student.objects.create(last_name="Лютивичев", first_name="Лютич", patronymic="Лютивич", birth_year=1488, group_number="У-243")
-Student.objects.create(last_name="Тинкеров", first_name="Тинкер", patronymic="Тинкерович", birth_year=1790, group_number="У-242")
-Student.objects.create(last_name="Инвокеров", first_name="Инвокер", patronymic="Инвокерович", birth_year=1674, group_number="У-244")
-Student.objects.create(last_name="Пуджoв", first_name="Пудж", patronymic="Пуджoвич", birth_year=1337, group_number="У-242")
-Student.objects.create(last_name="Рикимаров", first_name="Рики", patronymic="Сайлентович", birth_year=2007, group_number="У-243")
+
+Student.objects.create(familia="Лютивичев", imy="Лютич", otchestvo="Лютивич", birth_years=1488, group_number="У-243")
+Student.objects.create(familia="Тинкеров", imy="Тинкер", otchestvo="Тинкерович", birth_years=1790, group_number="У-242")
+Student.objects.create(familia="Инвокеров", imy="Инвокер", otchestvo="Инвокерович", birth_years=1674, group_number="У-244")
+Student.objects.create(familia="Пуджoв", imy="Пудж", otchestvo="Пуджoвич", birth_years=1337, group_number="У-242")
+Student.objects.create(familia="Рикимаров", imy="Рики", otchestvo="Сайлентович", birth_years=2007, group_number="У-243")
 
 # Выходим из консоли (Ctrl+Z и Enter для Windows, Ctrl+D для macOS/Linux)
 ```
@@ -68,9 +69,8 @@ python manage.py runserver
 
 ---
 
-## Куда заходить, чтобы всё проверить
+## ССылки для проверки
 
-Открывай браузер и погнали по ссылкам:
 
 *   **Главная страница:**
     *   `http://127.0.0.1:8000/`
@@ -78,7 +78,7 @@ python manage.py runserver
 *   **ПРЗ 15 - Смотрим, кто в базе:**
     *   `http://127.0.0.1:8000/students/`.
 
-*   **ПРЗ 12 - Играемся с адресами:**
+*   **ПРЗ 12 - Различные адреса**
     *   `http://127.0.0.1:8000/user/pro_gamer_228/` — проверяем, как имя из URL попадает на страницу.
     *   `http://127.0.0.1:8000/archive/2024/11/` — проверяем передачу года и месяца.
     *   `http://127.0.0.1:8000/search/?q=dota2&category=games` — проверяем, как сайт реагирует на параметры после знака `?`.
