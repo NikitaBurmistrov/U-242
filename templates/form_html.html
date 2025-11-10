@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML Форма студента</title>
+</head>
+<body>
+    <h2>Анкета студента</h2>
+    <form action="/formhtml/" method="post">
+        {% csrf_token %}
+
+        <p>Фамилия: <br><input type="text" name="last_name" /></p>
+        <p>Имя: <br><input type="text" name="first_name" /></p>
+        <p>Отчество: <br><input type="text" name="patronymic" /></p>
+        <p>Возраст: <br><input type="number" name="age" /></p>
+        <p>Адрес проживания: <br><textarea name="address" rows="4" cols="30"></textarea></p>
+
+        <p>Номер группы: <br>
+            <select name="group">
+                <option value="У-242">У-242</option>
+                <option value="У-243">У-243</option>
+                <option value="У-244">У-244</option>
+            </select>
+        </p>
+
+        <p>Предметы к сдаче в сессию: <br>
+            <input type="checkbox" name="subjects" value="Иностранный язык"> Иностранный язык<br>
+            <input type="checkbox" name="subjects" value="Технология программирования">Технология программирования <br>
+            <input type="checkbox" name="subjects" value="Мат.моделирование технолог. объектов"> Мат.моделирование технолог.объектов<br>
+        </p>
+
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

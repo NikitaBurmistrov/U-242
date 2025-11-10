@@ -1,0 +1,29 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Главная</a> |
+            <a href="/about/">О нас</a> |
+            <a href="/contacts/">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>{% block header %}{% endblock %}</h1>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        {% include "banner.html" %}
+        <p>© ВГУИТ. 2025. Все права защищены.</p>
+    </footer>
+</body>
+</html>

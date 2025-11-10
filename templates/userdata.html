@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Форма пользователя</title>
+    <style>
+        .errorlist {
+            color: red;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Введите ваши данные</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>

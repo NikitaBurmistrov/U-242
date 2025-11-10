@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Статические файлы</title>
+
+    <!-- Ссылка на файл стилей -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <h1>Вгуит</h1>
+
+    <!-- Ссылка на изображение -->
+    <img src="{% static 'images/static.jpg' %}" alt="вгуит">
+
+    <p>Это изображение и стили загружены из статических файлов.</p>
+</body>
+</html>

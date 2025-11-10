@@ -1,0 +1,22 @@
+<!-- templates/complex.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Сложные данные</title>
+</head>
+<body>
+    <h1>{{ header }}</h1>
+
+    <p>Имя: {{ user.name }}</p>
+    <p>Возраст: {{ user.age }}</p>
+    <p>Адрес: ул. {{ address.0 }}, д. {{ address.1 }}, кв. {{ address.2 }}</p>
+
+    <h3>Знакомые языки программирования:</h3>
+    <ul>
+        {% for lang in langs %}
+            <li>{{ lang }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
